@@ -11,18 +11,19 @@ NAME = libft.a
 all:${NAME}
 
 ${NAME}:${OBJS}
-	${LIBC} ${NAME} ${OBJS}
+	@${LIBC} ${NAME} ${OBJS}
 
 %o:%c
-	${CC} ${FLAGS} -c -o $@ $^
+	@${CC} ${FLAGS} -c -o $@ $^
 
 run:
-	${CC} ${FLAGS} main.c ${INC} ${LFLAG}
+	@${CC} ${FLAGS} main.c ${INC} ${LFLAG}
 
-clean: 
-	rm -f ${NAME}
+clean:
+	@echo delet the file.o
+	@rm -f ${OBJS}
 fclean:clean
-	rm -f ${OBJS}
+	@rm -f ${NAME}
 re:fclean all
 
 .PHONY:run all fclean clean 
