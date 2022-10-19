@@ -11,32 +11,29 @@
 /* ************************************************************************** */
 
 #include "libft.h"
- 
-int ft_atoi(const char *str)
+
+int	ft_atoi(const char *str)
 {
-    int res;
-    int n;
-    int i;
-    i = 0;
-    n = 1;
-    res = 0;
-    
-    while(str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v' ||
-     str[i] == '\f' || str[i] == '\r'))
-     i++;
-    if (str[i] == '-')
-    {
-        n *= -n; 
-    }
-    if(str[i] == '+' || str[i] == '-')
-    i++;
-    while (str[i] && str[i] >= '0' && str[i] <= '9')
-    {
-        res = res * 10 + (str[i] - 48);
-        i++;
-    }
-    return(n * res);
+	int	res;
+	int	n;
+	int	i;
+
+	i = 0;
+	n = 1;
+	res = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
+			|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
+		i++;
+	if (str[i] == '-')
+	{
+		n *= -n;
+	}
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
+	return (n * res);
 }
-
-
-

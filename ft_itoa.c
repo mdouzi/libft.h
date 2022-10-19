@@ -33,10 +33,11 @@ static int	len_num(long n)
 
 char	*ft_itoa(int n)
 {
-    long bb;
-    bb = n;
-	char		*str;
-	int			i;
+	long	bb;
+	char	*str;
+	int		i;
+
+	bb = n;
 	i = len_num(bb);
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (!str)

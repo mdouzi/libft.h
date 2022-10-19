@@ -6,7 +6,7 @@
 /*   By: mdouzi <mdouzi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:03:32 by mdouzi            #+#    #+#             */
-/*   Updated: 2022/10/19 20:52:12 by mdouzi           ###   ########.fr       */
+/*   Updated: 2022/10/19 23:19:07 by mdouzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,22 +47,16 @@ static int	word_number(char const *s, char c)
 	return (word_n);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**spliter(char const *s, char c, char **str)
 {
-	char	**str;
-	int		j;
-	int		i;
-	int		n;
-	int		go;
-	
-	if (!s)
-		return (NULL);
+	int	j;
+	int	i;
+	int	n;
+	int	go;
+
 	j = 0;
 	n = 0;
 	i = word_number(s, c);
-	str = (char **)malloc(sizeof(char *) * (i + 1));
-	if (!str)
-		return (NULL);
 	while (s[n])
 	{
 		while (s[n] && s[n] == c)
@@ -77,5 +71,20 @@ char	**ft_split(char const *s, char c)
 			n++;
 	}
 	str[j] = NULL;
+	return (str);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		i;
+	char	**str;
+
+	if (!s)
+		return (NULL);
+	i = word_number(s, c);
+	str = (char **)malloc(sizeof(char *) * (i + 1));
+	if (!str)
+		return (NULL);
+	str = spliter(s, c, str);
 	return (str);
 }
