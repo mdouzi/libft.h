@@ -6,7 +6,7 @@
 /*   By: mdouzi <mdouzi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 00:07:33 by mdouzi            #+#    #+#             */
-/*   Updated: 2022/10/05 19:50:59 by mdouzi           ###   ########.fr       */
+/*   Updated: 2022/10/19 20:43:19 by mdouzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,12 @@ size_t    ft_strlcat(char *dest, const char *src, size_t size)
     dest[destlen] = '\0';
     return (result);
 }
+// int main()
+// {
+//     char str[] = "mohamed";
+//     char st[] = "douzi";
+
+//     ft_strlcat(str, st, 0);
+    
+//     printf("%zu\n", ft_strlcat(str, st, 0));
+// }

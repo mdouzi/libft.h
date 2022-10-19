@@ -6,11 +6,12 @@
 /*   By: mdouzi <mdouzi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 22:20:44 by mdouzi            #+#    #+#             */
-/*   Updated: 2022/10/15 19:58:10 by mdouzi           ###   ########.fr       */
+/*   Updated: 2022/10/19 04:35:37 by mdouzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	len_num(long n)
 {

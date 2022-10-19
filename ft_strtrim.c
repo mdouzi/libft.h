@@ -6,7 +6,7 @@
 /*   By: mdouzi <mdouzi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:20:35 by mdouzi            #+#    #+#             */
-/*   Updated: 2022/10/10 21:44:11 by mdouzi           ###   ########.fr       */
+/*   Updated: 2022/10/19 20:43:41 by mdouzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,11 @@ char *ft_strtrim(char const *s1, char const *set)
     new = ft_substr(s1,0,len);
     return new;
 }
+// int main()
+// {
+//     char str[] = "mohamed douzi";
+//     char st[] = "mi";
+    
+//     printf("%s\n", ft_strtrim(str, st));
+// }
 
